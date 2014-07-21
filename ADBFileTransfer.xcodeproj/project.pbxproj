@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09E2B993197D3A7F00432A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B992197D3A7F00432A84 /* main.m */; };
+		09E2B996197D3A7F00432A84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B995197D3A7F00432A84 /* ViewController.m */; };
+		09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B998197D3A7F00432A84 /* AppDelegate.m */; };
+		09E2B99B197D3A7F00432A84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B99A197D3A7F00432A84 /* Images.xcassets */; };
+		09E2B99E197D3A7F00432A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B99C197D3A7F00432A84 /* Main.storyboard */; };
+		09E2B9AA197D3A7F00432A84 /* ADBFileTransferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B9A9197D3A7F00432A84 /* ADBFileTransferTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09E2B9A4197D3A7F00432A84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09E2B985197D3A7F00432A84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09E2B98C197D3A7F00432A84;
+			remoteInfo = ADBFileTransfer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09E2B98D197D3A7F00432A84 /* ADBFileTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADBFileTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E2B991197D3A7F00432A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E2B992197D3A7F00432A84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09E2B994197D3A7F00432A84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		09E2B995197D3A7F00432A84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09E2B997197D3A7F00432A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09E2B998197D3A7F00432A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09E2B99A197D3A7F00432A84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		09E2B99D197D3A7F00432A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09E2B9A3197D3A7F00432A84 /* ADBFileTransferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADBFileTransferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09E2B9A8197D3A7F00432A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E2B9A9197D3A7F00432A84 /* ADBFileTransferTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADBFileTransferTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09E2B98A197D3A7F00432A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E2B9A0197D3A7F00432A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09E2B984197D3A7F00432A84 = {
+			isa = PBXGroup;
+			children = (
+				09E2B98F197D3A7F00432A84 /* ADBFileTransfer */,
+				09E2B9A6197D3A7F00432A84 /* ADBFileTransferTests */,
+				09E2B98E197D3A7F00432A84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09E2B98E197D3A7F00432A84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09E2B98D197D3A7F00432A84 /* ADBFileTransfer.app */,
+				09E2B9A3197D3A7F00432A84 /* ADBFileTransferTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09E2B98F197D3A7F00432A84 /* ADBFileTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				09E2B994197D3A7F00432A84 /* ViewController.h */,
+				09E2B995197D3A7F00432A84 /* ViewController.m */,
+				09E2B997197D3A7F00432A84 /* AppDelegate.h */,
+				09E2B998197D3A7F00432A84 /* AppDelegate.m */,
+				09E2B99A197D3A7F00432A84 /* Images.xcassets */,
+				09E2B99C197D3A7F00432A84 /* Main.storyboard */,
+				09E2B990197D3A7F00432A84 /* Supporting Files */,
+			);
+			path = ADBFileTransfer;
+			sourceTree = "<group>";
+		};
+		09E2B990197D3A7F00432A84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09E2B991197D3A7F00432A84 /* Info.plist */,
+				09E2B992197D3A7F00432A84 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09E2B9A6197D3A7F00432A84 /* ADBFileTransferTests */ = {
+			isa = PBXGroup;
+			children = (
+				09E2B9A9197D3A7F00432A84 /* ADBFileTransferTests.m */,
+				09E2B9A7197D3A7F00432A84 /* Supporting Files */,
+			);
+			path = ADBFileTransferTests;
+			sourceTree = "<group>";
+		};
+		09E2B9A7197D3A7F00432A84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09E2B9A8197D3A7F00432A84 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09E2B98C197D3A7F00432A84 /* ADBFileTransfer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E2B9AD197D3A7F00432A84 /* Build configuration list for PBXNativeTarget "ADBFileTransfer" */;
+			buildPhases = (
+				09E2B989197D3A7F00432A84 /* Sources */,
+				09E2B98A197D3A7F00432A84 /* Frameworks */,
+				09E2B98B197D3A7F00432A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ADBFileTransfer;
+			productName = ADBFileTransfer;
+			productReference = 09E2B98D197D3A7F00432A84 /* ADBFileTransfer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09E2B9A2197D3A7F00432A84 /* ADBFileTransferTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09E2B9B0197D3A7F00432A84 /* Build configuration list for PBXNativeTarget "ADBFileTransferTests" */;
+			buildPhases = (
+				09E2B99F197D3A7F00432A84 /* Sources */,
+				09E2B9A0197D3A7F00432A84 /* Frameworks */,
+				09E2B9A1197D3A7F00432A84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09E2B9A5197D3A7F00432A84 /* PBXTargetDependency */,
+			);
+			name = ADBFileTransferTests;
+			productName = ADBFileTransferTests;
+			productReference = 09E2B9A3197D3A7F00432A84 /* ADBFileTransferTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09E2B985197D3A7F00432A84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = CollegeCODE;
+				TargetAttributes = {
+					09E2B98C197D3A7F00432A84 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					09E2B9A2197D3A7F00432A84 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 09E2B98C197D3A7F00432A84;
+					};
+				};
+			};
+			buildConfigurationList = 09E2B988197D3A7F00432A84 /* Build configuration list for PBXProject "ADBFileTransfer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09E2B984197D3A7F00432A84;
+			productRefGroup = 09E2B98E197D3A7F00432A84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09E2B98C197D3A7F00432A84 /* ADBFileTransfer */,
+				09E2B9A2197D3A7F00432A84 /* ADBFileTransferTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09E2B98B197D3A7F00432A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E2B99B197D3A7F00432A84 /* Images.xcassets in Resources */,
+				09E2B99E197D3A7F00432A84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E2B9A1197D3A7F00432A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09E2B989197D3A7F00432A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E2B996197D3A7F00432A84 /* ViewController.m in Sources */,
+				09E2B993197D3A7F00432A84 /* main.m in Sources */,
+				09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E2B99F197D3A7F00432A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09E2B9AA197D3A7F00432A84 /* ADBFileTransferTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09E2B9A5197D3A7F00432A84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09E2B98C197D3A7F00432A84 /* ADBFileTransfer */;
+			targetProxy = 09E2B9A4197D3A7F00432A84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09E2B99C197D3A7F00432A84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09E2B99D197D3A7F00432A84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09E2B9AB197D3A7F00432A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		09E2B9AC197D3A7F00432A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		09E2B9AE197D3A7F00432A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ADBFileTransfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09E2B9AF197D3A7F00432A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ADBFileTransfer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		09E2B9B1197D3A7F00432A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ADBFileTransfer.app/Contents/MacOS/ADBFileTransfer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADBFileTransferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		09E2B9B2197D3A7F00432A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ADBFileTransfer.app/Contents/MacOS/ADBFileTransfer";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ADBFileTransferTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09E2B988197D3A7F00432A84 /* Build configuration list for PBXProject "ADBFileTransfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E2B9AB197D3A7F00432A84 /* Debug */,
+				09E2B9AC197D3A7F00432A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09E2B9AD197D3A7F00432A84 /* Build configuration list for PBXNativeTarget "ADBFileTransfer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E2B9AE197D3A7F00432A84 /* Debug */,
+				09E2B9AF197D3A7F00432A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		09E2B9B0197D3A7F00432A84 /* Build configuration list for PBXNativeTarget "ADBFileTransferTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E2B9B1197D3A7F00432A84 /* Debug */,
+				09E2B9B2197D3A7F00432A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09E2B985197D3A7F00432A84 /* Project object */;
+}
