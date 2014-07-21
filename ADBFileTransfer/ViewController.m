@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ListData.h"
 #import "ListDataDoc.h"
+#import "AdbHelper.h"
 
 @implementation ViewController
             
@@ -17,19 +18,39 @@
     // Do any additional setup after loading the view.
     // Insert code here to initialize your application
     
-    ListDataDoc *dat1 = [[ListDataDoc alloc] initWithTitle:@"Folder1" size:10.1 thumbImage:[NSImage
-                                                                                            imageNamed:@"folder.png"]];
-    ListDataDoc *dat2 = [[ListDataDoc alloc] initWithTitle:@"File" size:10.1 thumbImage:[NSImage
-                                                                                         imageNamed:@"file.png"]];
+    ADBHelper *helper = [[ADBHelper alloc]init];
+    [helper getAdbVersion];
     
-    ListDataDoc *dat3 = [[ListDataDoc alloc] initWithTitle:@"Folder2" size:10.1 thumbImage:[NSImage
-                                                                                            imageNamed:@"folder.png"]];
+    NSString *all_files = [helper getFileList:@"\"/sdcard/\""];
     
-    NSMutableArray *list_data = [NSMutableArray arrayWithObjects:dat1, dat2, dat3, nil];
+    NSArray *files = [all_files componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSMutableArray *list_data = [[NSMutableArray alloc] init];
+    
+    int i = 0;
+    
+    for(NSString* f in files){
+        if([f isNotEqualTo:@""]){
+            
+            if([f isNotEqualTo:@"INTERNALEND"]){
+                ListDataDoc *dat;
+                if(i == 0){
+                    dat = [[ListDataDoc alloc] initWithTitle:[f substringToIndex:[f length]-1] size:10.1
+                                                               thumbImage:[NSImage imageNamed:@"folder.png"]];
+                }
+                else{
+                    dat = [[ListDataDoc alloc] initWithTitle:f size:10.1 thumbImage:[NSImage
+                                                                                     imageNamed:@"file.png"]];
+                }
+                [list_data addObject:dat];
+            }
+            else{
+                i = 1;
+            }
+        }
+    }
+    
     self.list_data = list_data;
     
-    
-                                
 }
 
 - (void)setRepresentedObject:(id)representedObject {

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A283o" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <scenes>
@@ -34,11 +33,15 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="616" height="401"/>
+                        <rect key="frame" x="0.0" y="0.0" width="538" height="478"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView identifier="btn_back" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-3E-W8Q">
+                                <rect key="frame" x="0.0" y="414" width="64" height="64"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YcT-Gf-IK8"/>
+                            </imageView>
                             <scrollView appearanceType="aqua" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-0A-t02">
-                                <rect key="frame" x="0.0" y="3" width="616" height="398"/>
+                                <rect key="frame" x="0.0" y="30" width="538" height="376"/>
                                 <clipView key="contentView" ambiguous="YES" misplaced="YES" id="RJw-zz-K6a">
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +52,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn identifier="col1" width="611" minWidth="40" maxWidth="1000" id="sab-Ju-STR">
+                                                <tableColumn identifier="col1" width="533" minWidth="40" maxWidth="1000" id="sab-Ju-STR">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -63,15 +66,15 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="YP6-OF-4Rk">
-                                                            <rect key="frame" x="1" y="1" width="611" height="32"/>
+                                                            <rect key="frame" x="1" y="1" width="533" height="32"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHZ-u4-oCs">
-                                                                    <rect key="frame" x="3" y="15" width="17" height="17"/>
+                                                                    <rect key="frame" x="3" y="0.0" width="32" height="32"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="OxK-yY-TRI"/>
                                                                 </imageView>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aa3-HL-8lb">
-                                                                    <rect key="frame" x="25" y="15" width="105" height="17"/>
+                                                                    <rect key="frame" x="59" y="8" width="415" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="aCZ-8J-m0C">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -106,10 +109,13 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="aWM-Sf-nMZ" id="d81-w2-zxe"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-131" y="554.5"/>
+            <point key="canvasLocation" x="-170" y="593"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">

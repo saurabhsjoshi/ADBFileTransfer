@@ -10,5 +10,6 @@
 
 @interface ViewController : NSViewController
 @property (strong) NSMutableArray *list_data;
+@property (weak) IBOutlet NSTableView *tableView;
 @end
 

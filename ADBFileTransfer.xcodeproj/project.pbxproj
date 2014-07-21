@@ -17,6 +17,12 @@
 		09E2B9C0197D49E400432A84 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9BF197D49E400432A84 /* folder.png */; };
 		09E2B9C3197D4B6000432A84 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9C2197D4B6000432A84 /* file.png */; };
 		09E2B9C6197D4D3400432A84 /* ListDataDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B9C5197D4D3400432A84 /* ListDataDoc.m */; };
+		09E2B9F7197D672F00432A84 /* adb in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9F6197D672F00432A84 /* adb */; };
+		09E2B9FB197D6AD800432A84 /* adb.py in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9F9197D6AD800432A84 /* adb.py */; };
+		09E2B9FE197D6C2300432A84 /* my_adb.pyw in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9FD197D6C2300432A84 /* my_adb.pyw */; };
+		09E2BA00197D755000432A84 /* adb.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9FF197D755000432A84 /* adb.pyc */; };
+		09E2BA04197D789800432A84 /* runner.sh in Resources */ = {isa = PBXBuildFile; fileRef = 09E2BA03197D789800432A84 /* runner.sh */; };
+		09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2BA05197D7AC400432A84 /* AdbHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,13 @@
 		09E2B9C2197D4B6000432A84 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
 		09E2B9C4197D4CA800432A84 /* ListDataDoc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListDataDoc.h; sourceTree = "<group>"; };
 		09E2B9C5197D4D3400432A84 /* ListDataDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataDoc.m; sourceTree = "<group>"; };
+		09E2B9F6197D672F00432A84 /* adb */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = adb; sourceTree = "<group>"; };
+		09E2B9F9197D6AD800432A84 /* adb.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = adb.py; sourceTree = "<group>"; };
+		09E2B9FD197D6C2300432A84 /* my_adb.pyw */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = my_adb.pyw; sourceTree = "<group>"; };
+		09E2B9FF197D755000432A84 /* adb.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = adb.pyc; sourceTree = "<group>"; };
+		09E2BA03197D789800432A84 /* runner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runner.sh; sourceTree = "<group>"; };
+		09E2BA05197D7AC400432A84 /* AdbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdbHelper.m; sourceTree = "<group>"; };
+		09E2BA07197D7ADC00432A84 /* AdbHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdbHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +102,7 @@
 		09E2B98F197D3A7F00432A84 /* ADBFileTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				09E2B9F8197D673900432A84 /* android-tools */,
 				09E2B9C4197D4CA800432A84 /* ListDataDoc.h */,
 				09E2B9C5197D4D3400432A84 /* ListDataDoc.m */,
 				09E2B9BE197D462E00432A84 /* ListData.h */,
@@ -97,6 +111,8 @@
 				09E2B995197D3A7F00432A84 /* ViewController.m */,
 				09E2B997197D3A7F00432A84 /* AppDelegate.h */,
 				09E2B998197D3A7F00432A84 /* AppDelegate.m */,
+				09E2BA05197D7AC400432A84 /* AdbHelper.m */,
+				09E2BA07197D7ADC00432A84 /* AdbHelper.h */,
 				09E2B99C197D3A7F00432A84 /* Main.storyboard */,
 				09E2B99A197D3A7F00432A84 /* Images.xcassets */,
 				09E2B9C1197D49FD00432A84 /* res */,
@@ -138,6 +154,18 @@
 				09E2B9BF197D49E400432A84 /* folder.png */,
 			);
 			name = res;
+			sourceTree = "<group>";
+		};
+		09E2B9F8197D673900432A84 /* android-tools */ = {
+			isa = PBXGroup;
+			children = (
+				09E2BA03197D789800432A84 /* runner.sh */,
+				09E2B9FF197D755000432A84 /* adb.pyc */,
+				09E2B9FD197D6C2300432A84 /* my_adb.pyw */,
+				09E2B9F9197D6AD800432A84 /* adb.py */,
+				09E2B9F6197D672F00432A84 /* adb */,
+			);
+			name = "android-tools";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,9 +248,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E2BA00197D755000432A84 /* adb.pyc in Resources */,
+				09E2B9F7197D672F00432A84 /* adb in Resources */,
+				09E2B9FE197D6C2300432A84 /* my_adb.pyw in Resources */,
+				09E2BA04197D789800432A84 /* runner.sh in Resources */,
 				09E2B99B197D3A7F00432A84 /* Images.xcassets in Resources */,
 				09E2B99E197D3A7F00432A84 /* Main.storyboard in Resources */,
 				09E2B9C0197D49E400432A84 /* folder.png in Resources */,
+				09E2B9FB197D6AD800432A84 /* adb.py in Resources */,
 				09E2B9C3197D4B6000432A84 /* file.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +277,7 @@
 				09E2B996197D3A7F00432A84 /* ViewController.m in Sources */,
 				09E2B9C6197D4D3400432A84 /* ListDataDoc.m in Sources */,
 				09E2B993197D3A7F00432A84 /* main.m in Sources */,
+				09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */,
 				09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */,
 				09E2B9BD197D460100432A84 /* ListData.m in Sources */,
 			);
