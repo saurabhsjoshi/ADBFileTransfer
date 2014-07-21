@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
-
-
+@property (strong) NSMutableArray *list_data;
 @end
 

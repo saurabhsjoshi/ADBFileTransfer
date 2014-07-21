@@ -7,9 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ListDataDoc.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
-
 @end
 
