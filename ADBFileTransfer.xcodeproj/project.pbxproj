@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		097975CE197E12CF0069DD4C /* KPCScaleToFillNSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097975CD197E12CF0069DD4C /* KPCScaleToFillNSImageView.m */; };
 		09E2B993197D3A7F00432A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B992197D3A7F00432A84 /* main.m */; };
 		09E2B996197D3A7F00432A84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B995197D3A7F00432A84 /* ViewController.m */; };
 		09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2B998197D3A7F00432A84 /* AppDelegate.m */; };
@@ -24,7 +23,6 @@
 		09E2BA00197D755000432A84 /* adb.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9FF197D755000432A84 /* adb.pyc */; };
 		09E2BA04197D789800432A84 /* runner.sh in Resources */ = {isa = PBXBuildFile; fileRef = 09E2BA03197D789800432A84 /* runner.sh */; };
 		09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2BA05197D7AC400432A84 /* AdbHelper.m */; };
-		09E2BA09197DEA5D00432A84 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 09E2BA08197DEA5D00432A84 /* home.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		097975CC197E12CF0069DD4C /* KPCScaleToFillNSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCScaleToFillNSImageView.h; sourceTree = "<group>"; };
-		097975CD197E12CF0069DD4C /* KPCScaleToFillNSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCScaleToFillNSImageView.m; sourceTree = "<group>"; };
 		09E2B98D197D3A7F00432A84 /* ADBFileTransfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADBFileTransfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E2B991197D3A7F00432A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E2B992197D3A7F00432A84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,7 +61,6 @@
 		09E2BA03197D789800432A84 /* runner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runner.sh; sourceTree = "<group>"; };
 		09E2BA05197D7AC400432A84 /* AdbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdbHelper.m; sourceTree = "<group>"; };
 		09E2BA07197D7ADC00432A84 /* AdbHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdbHelper.h; sourceTree = "<group>"; };
-		09E2BA08197DEA5D00432A84 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,15 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		097975CF197E12D90069DD4C /* CustomUI */ = {
-			isa = PBXGroup;
-			children = (
-				097975CC197E12CF0069DD4C /* KPCScaleToFillNSImageView.h */,
-				097975CD197E12CF0069DD4C /* KPCScaleToFillNSImageView.m */,
-			);
-			name = CustomUI;
-			sourceTree = "<group>";
-		};
 		09E2B984197D3A7F00432A84 = {
 			isa = PBXGroup;
 			children = (
@@ -116,18 +102,17 @@
 		09E2B98F197D3A7F00432A84 /* ADBFileTransfer */ = {
 			isa = PBXGroup;
 			children = (
-				097975CF197E12D90069DD4C /* CustomUI */,
 				09E2B9F8197D673900432A84 /* android-tools */,
 				09E2B9C4197D4CA800432A84 /* ListDataDoc.h */,
 				09E2B9C5197D4D3400432A84 /* ListDataDoc.m */,
 				09E2B9BE197D462E00432A84 /* ListData.h */,
 				09E2B9BC197D460100432A84 /* ListData.m */,
-				09E2B994197D3A7F00432A84 /* ViewController.h */,
-				09E2B995197D3A7F00432A84 /* ViewController.m */,
 				09E2B997197D3A7F00432A84 /* AppDelegate.h */,
 				09E2B998197D3A7F00432A84 /* AppDelegate.m */,
 				09E2BA07197D7ADC00432A84 /* AdbHelper.h */,
 				09E2BA05197D7AC400432A84 /* AdbHelper.m */,
+				09E2B994197D3A7F00432A84 /* ViewController.h */,
+				09E2B995197D3A7F00432A84 /* ViewController.m */,
 				09E2B99C197D3A7F00432A84 /* Main.storyboard */,
 				09E2B99A197D3A7F00432A84 /* Images.xcassets */,
 				09E2B9C1197D49FD00432A84 /* res */,
@@ -165,7 +150,6 @@
 		09E2B9C1197D49FD00432A84 /* res */ = {
 			isa = PBXGroup;
 			children = (
-				09E2BA08197DEA5D00432A84 /* home.png */,
 				09E2B9C2197D4B6000432A84 /* file.png */,
 				09E2B9BF197D49E400432A84 /* folder.png */,
 			);
@@ -270,7 +254,6 @@
 				09E2BA04197D789800432A84 /* runner.sh in Resources */,
 				09E2B99B197D3A7F00432A84 /* Images.xcassets in Resources */,
 				09E2B99E197D3A7F00432A84 /* Main.storyboard in Resources */,
-				09E2BA09197DEA5D00432A84 /* home.png in Resources */,
 				09E2B9C0197D49E400432A84 /* folder.png in Resources */,
 				09E2B9FB197D6AD800432A84 /* adb.py in Resources */,
 				09E2B9C3197D4B6000432A84 /* file.png in Resources */,
@@ -297,7 +280,6 @@
 				09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */,
 				09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */,
 				09E2B9BD197D460100432A84 /* ListData.m in Sources */,
-				097975CE197E12CF0069DD4C /* KPCScaleToFillNSImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

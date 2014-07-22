@@ -16,6 +16,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="355" height="218"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </view>
+                        <contentBorderThickness minY="0.0" maxY="0.0"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="dTB-fJ-lma"/>
                         </connections>
@@ -37,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView appearanceType="aqua" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbo-0A-t02">
-                                <rect key="frame" x="0.0" y="30" width="538" height="376"/>
+                                <rect key="frame" x="0.0" y="30" width="538" height="417"/>
                                 <clipView key="contentView" ambiguous="YES" misplaced="YES" id="RJw-zz-K6a">
                                     <rect key="frame" x="1" y="17" width="238" height="117"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,17 +120,44 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <progressIndicator appearanceType="aqua" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-LX-Wi4">
-                                <rect key="frame" x="486" y="430" width="32" height="32"/>
+                            <button identifier="btn_home" appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmv-Nm-1bg">
+                                <rect key="frame" x="39" y="456" width="14" height="14"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSHomeTemplate" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="eIy-5f-WWl">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYn-1j-JB5">
+                                <rect key="frame" x="61" y="451" width="12" height="22"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="eDD-h4-Ai4">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Nj-dp-qnP">
+                                <rect key="frame" x="5" y="456" width="9" height="12"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSLeftFacingTriangleTemplate" imagePosition="overlaps" alignment="center" enabled="NO" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="BLA-7l-JaC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59G-h4-TRS">
+                                <rect key="frame" x="20" y="456" width="9" height="12"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="circular" image="NSRightFacingTriangleTemplate" imagePosition="overlaps" alignment="center" enabled="NO" state="on" imageScaling="proportionallyDown" sound="Pop" inset="2" id="LRa-7s-MVU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <progressIndicator appearanceType="aqua" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="wxI-LX-Wi4">
+                                <rect key="frame" x="515" y="454" width="16" height="16"/>
                             </progressIndicator>
-                            <imageView identifier="btn_back" autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-3E-W8Q" customClass="KPCScaleToFillNSImageView">
-                                <rect key="frame" x="5" y="414" width="64" height="64"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YcT-Gf-IK8"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="btn_home" destination="Tjx-3E-W8Q" id="6e1-SU-ybD"/>
+                        <outlet property="btn_back" destination="8Nj-dp-qnP" id="3HC-m8-oen"/>
+                        <outlet property="btn_forward" destination="59G-h4-TRS" id="Ytg-Uv-c41"/>
+                        <outlet property="btn_home" destination="gmv-Nm-1bg" id="g7v-mC-Wk9"/>
+                        <outlet property="btn_ref" destination="iYn-1j-JB5" id="L4b-dD-4kX"/>
                         <outlet property="lbl_cur" destination="3jM-7A-Aeh" id="M5z-JX-Z1d"/>
                         <outlet property="prg_bar" destination="wxI-LX-Wi4" id="Xmy-Qv-Z76"/>
                         <outlet property="prg_loading" destination="wxI-LX-Wi4" id="xjq-ax-v9R"/>
@@ -305,5 +333,10 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSHomeTemplate" width="14" height="14"/>
+        <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
+        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
+        <sound name="Pop"/>
     </resources>
 </document>

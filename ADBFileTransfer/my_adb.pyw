@@ -34,6 +34,7 @@ def main(argc, argv):
             print "Wrong Argument"
     else:
         print "wtf"
+    quit()
 
 if __name__ == "__main__":
     main(len(sys.argv) - 1, sys.argv)
