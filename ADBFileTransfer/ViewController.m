@@ -18,7 +18,7 @@
 @synthesize lbl_cur = lbl_path;
 @synthesize prg_loading = progressBar;
 
-NSString* cur_path = @"\"/sdcard/\"";
+NSString* cur_path = @"\'/sdcard/\'";
 int offset = 0;
 
 - (void) populateAtPath {
@@ -97,9 +97,6 @@ int offset = 0;
     NSTableCellView *cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
     
     
-    
-    // Since this is a single-column table view, this would not be necessary.
-    // But it's a good practice to do it in order by remember it when a table is multicolumn.
     if( [tableColumn.identifier isEqualToString:@"col1"] )
     {
         ListDataDoc *listDoc = [self.list_data objectAtIndex:row];
@@ -121,9 +118,9 @@ int offset = 0;
 
 - (void) changeCurPath:(NSString*)to_add{
     //Remove the colons
-    cur_path = [cur_path stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+    cur_path = [cur_path stringByReplacingOccurrencesOfString:@"\'" withString:@""];
     //Add the path and the colons
-    cur_path = [NSString stringWithFormat:@"%@%@%@%@", @"\"", cur_path, to_add, @"/\""];
+    cur_path = [NSString stringWithFormat:@"%@%@%@%@", @"\'", cur_path, to_add, @"/\'"];
 }
 
 - (void)doubleClick:(id)object {

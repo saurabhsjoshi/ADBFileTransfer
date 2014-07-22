@@ -1,6 +1,5 @@
-#!/bin/bash
+#!/bin/sh
 # Python starter
-
 
 for i in $*; do 
     a+=$i
