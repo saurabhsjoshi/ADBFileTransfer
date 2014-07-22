@@ -16,6 +16,7 @@
 // NO need of self everywhere :)
 @synthesize tableView = _tableView;
 @synthesize lbl_cur = lbl_path;
+@synthesize btn_home = btn_home;
 @synthesize prg_loading = progressBar;
 @synthesize btn_back = btn_back;
 @synthesize btn_forward = btn_forward;
@@ -25,10 +26,8 @@ NSString* cur_path = @"\'/sdcard/\'";
 int offset = 0;
 
 - (void) populateAtPath {
-    [_tableView setEnabled:NO];
+    [self toggleNavigation:NO];
     [progressBar startAnimation:nil];
-    [progressBar setHidden:NO];
-    
     if(offset == 0)
         [btn_back setEnabled:NO];
     
@@ -76,9 +75,8 @@ int offset = 0;
         self.list_data = list_data;
         dispatch_async(dispatch_get_main_queue(), ^ {
             [_tableView reloadData];
+            [self toggleNavigation:YES];
             [progressBar stopAnimation:nil];
-            [progressBar setHidden:YES];
-            [_tableView setEnabled:YES];
         });
     });
 }
@@ -88,12 +86,12 @@ int offset = 0;
     // Do any additional setup after loading the view.
     // Insert code here to initialize your application
     
-    [self.btn_home setTarget:self];
+    [btn_home setTarget:self];
     [btn_ref setTarget:self];
     [btn_back setTarget:self];
     [btn_forward setTarget:self];
     
-    [self.btn_home setAction:@selector(goHome:)];
+    [btn_home setAction:@selector(goHome:)];
     [btn_back setAction:@selector(goBack:)];
     [btn_forward setAction:@selector(goForward:)];
     
@@ -226,6 +224,31 @@ int offset = 0;
     }
 }
 
+- (void)setSubViewsEnabled:(BOOL)enabled
+{
+    NSView* currentView = NULL;
+    NSEnumerator* viewEnumerator = [[self.view subviews] objectEnumerator];
+    
+    while( currentView = [viewEnumerator nextObject] )
+    {
+        if( [currentView respondsToSelector:@selector(setEnabled:)] )
+        {
+            [(NSControl*)currentView setEnabled:enabled];
+        }
+        
+        [currentView display];
+    }
+}
+
+
+- (void) toggleNavigation:(BOOL)enabled{
+    [btn_home setEnabled:enabled];
+    [btn_forward setEnabled:enabled];
+    [btn_back setEnabled:enabled];
+    [btn_ref setEnabled:enabled];
+    [_tableView setEnabled:enabled];
+    [progressBar setHidden:enabled];
+}
 
 - (void)goHome:(NSEvent *)event {
     offset = 0;
@@ -244,6 +267,11 @@ int offset = 0;
     cur_path = [self.hist objectAtIndex:offset];
     [self populateAtPath];
 }
+
+-(void)refPath:(NSEvent*)event{
+    [self populateAtPath];
+}
+
 
 
 - (void)goBack:(NSEvent *)event {
