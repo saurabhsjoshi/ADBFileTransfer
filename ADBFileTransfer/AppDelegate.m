@@ -14,7 +14,20 @@
 @end
 
 @implementation AppDelegate
-            
+
+
+static dispatch_once_t once;
+static NSOperationQueue *connectionQueue;
++ (NSOperationQueue *)connectionQueue
+{
+    dispatch_once(&once, ^{
+        connectionQueue = [[NSOperationQueue alloc] init];
+        [connectionQueue setMaxConcurrentOperationCount:2];
+        [connectionQueue setName:@"com.collegecode.connectionqueue"];
+    });
+    return connectionQueue;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 }
 

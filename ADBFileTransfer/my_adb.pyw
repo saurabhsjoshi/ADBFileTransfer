@@ -19,12 +19,17 @@ def main(argc, argv):
         elif argv[1] == "1":
             path = argv[2]
             a = adb.shell_command("\"cd " + path +  " && ls -d */\"")
-            b = adb.shell_command("ls " + path)
-            print a
+            if "*/" not in a:
+                print a
             print "INTERNALEND"
-            for s in b.splitlines():
-                if(checkIfFile(a,s)):
-                    print s
+            b = adb.shell_command("ls " + path)
+            
+            try:
+                for s in b.splitlines():
+                    if(checkIfFile(a,s)):
+                        print s
+            except:
+                "INTERNALNODIR"
         else:
             print "Wrong Argument"
     else:

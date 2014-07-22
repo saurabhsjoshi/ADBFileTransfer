@@ -15,6 +15,6 @@
 @property (strong) ListData *data;
 @property (strong) NSImage *thumbImage;
 
-- (id)initWithTitle:(NSString*)title size:(float)size thumbImage:(NSImage *)thumbImage;
+- (id)initWithTitle:(NSString*)title type:(int)type thumbImage:(NSImage *)thumbImage;
 
 @end

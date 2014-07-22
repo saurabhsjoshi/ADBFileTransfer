@@ -11,9 +11,9 @@
 
 @implementation ListDataDoc
 
-- (id)initWithTitle:(NSString *)title size:(float)size thumbImage:(NSImage *)thumbImage{
+- (id)initWithTitle:(NSString *)title type:(int)type thumbImage:(NSImage *)thumbImage{
     if ((self = [super init])) {
-        self.data = [[ListData alloc] initWithTitle:title size:size];
+        self.data = [[ListData alloc] initWithTitle:title type:type];
         self.thumbImage = thumbImage;
     }
     return self;

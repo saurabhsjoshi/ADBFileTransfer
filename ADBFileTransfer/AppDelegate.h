@@ -10,5 +10,6 @@
 #import "ListDataDoc.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
++ (NSOperationQueue *)connectionQueue;
 @end
 

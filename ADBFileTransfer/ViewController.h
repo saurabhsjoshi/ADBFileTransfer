@@ -9,7 +9,17 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
+
+@property (strong) NSMutableArray *hist;
 @property (strong) NSMutableArray *list_data;
+
 @property (weak) IBOutlet NSTableView *tableView;
+@property (weak) IBOutlet NSProgressIndicator *prg_loading;
+@property (weak) IBOutlet NSTextField *lbl_cur;
+@property (weak) IBOutlet NSImageView *btn_home;
+
+- (void)doubleClick:(id)nid;
+- (void) populateAtPath;
+
 @end
 

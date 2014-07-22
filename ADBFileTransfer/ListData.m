@@ -10,10 +10,10 @@
 
 @implementation ListData
 
-- (id)initWithTitle:(NSString*)title size:(float)size {
+- (id)initWithTitle:(NSString*)title type:(int)type {
     if ((self = [super init])) {
         self.title = title;
-        self.size = size;
+        self.type = type;
     }
     return self;
 }
