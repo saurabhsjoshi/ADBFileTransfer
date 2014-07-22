@@ -43,7 +43,6 @@
 
 - (NSString *)getFileList: (NSString*)path{
     NSArray* args = [NSArray arrayWithObjects: @"1", path, nil];
-    
     return [self runTask:args];
 }
 

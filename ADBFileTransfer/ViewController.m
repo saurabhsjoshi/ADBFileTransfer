@@ -25,6 +25,7 @@ int offset = 0;
     [_tableView setEnabled:NO];
     [progressBar startAnimation:nil];
     [progressBar setHidden:NO];
+    
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^ {
         ADBHelper *helper = [[ADBHelper alloc]init];
@@ -79,8 +80,12 @@ int offset = 0;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Insert code here to initialize your application
+    
+    [self.btn_home setImage:[NSImage imageNamed:@"home.png"]];
+    
     self.hist = [[NSMutableArray alloc] init];
     [self populateAtPath];
+
 }
 
 
@@ -158,10 +163,15 @@ int offset = 0;
         
     }
 }
-
+- (void)mouseDown:(NSEvent *)event {
+    offset = 0;
+    cur_path = @"\'/sdcard/\'";
+    [self populateAtPath];
+}
 - (void)awakeFromNib {
     [_tableView setTarget:self];
     [_tableView setDoubleAction:@selector(doubleClick:)];
+    [self.btn_home setAction:@selector(mouseDown:)];
 }
 
 

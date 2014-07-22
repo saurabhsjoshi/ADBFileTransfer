@@ -18,7 +18,7 @@ def main(argc, argv):
             
         elif argv[1] == "1":
             path = argv[2]
-            a = adb.shell_command("\"cd " + path +  " && ls -d */\"")
+            a = adb.shell_command("\"cd " + path +  " && ls -ad */\"")
             if "*/" not in a:
                 print a
             print "INTERNALEND"

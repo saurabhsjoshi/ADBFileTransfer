@@ -15,7 +15,7 @@
 
 @implementation AppDelegate
 
-
+//Unique background process thingy
 static dispatch_once_t once;
 static NSOperationQueue *connectionQueue;
 + (NSOperationQueue *)connectionQueue
