@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "ListDataDoc.h"
+#import "QuickViewController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-+ (NSOperationQueue *)connectionQueue;
+@property (nonatomic, strong) QuickViewController *controller1;
 @end
 

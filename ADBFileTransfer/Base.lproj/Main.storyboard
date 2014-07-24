@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A298i" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6154.17"/>
     </dependencies>
     <scenes>
@@ -10,10 +11,10 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="ADBFileTransfer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" texturedBackground="YES" unifiedTitleAndToolbar="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="355" height="218"/>
+                        <rect key="contentRect" x="196" y="240" width="538" height="417"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
                         <view key="contentView" id="O92-4t-NeX">
-                            <rect key="frame" x="0.0" y="0.0" width="355" height="218"/>
+                            <rect key="frame" x="0.0" y="0.0" width="538" height="417"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </view>
                         <contentBorderThickness minY="0.0" maxY="0.0"/>
@@ -46,7 +47,7 @@
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" autosaveColumns="NO" rowHeight="32" rowSizeStyle="automatic" viewBased="YES" id="aWM-Sf-nMZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="col1" width="533" minWidth="40" maxWidth="1000" id="sab-Ju-STR">
@@ -166,7 +167,72 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="593"/>
+            <point key="canvasLocation" x="403" y="626"/>
+        </scene>
+        <!--Window Controller - Quick View-->
+        <scene sceneID="vFy-t5-5nv">
+            <objects>
+                <windowController storyboardIdentifier="QuickViewControllerWindow" id="nNk-OG-YuX" sceneMemberID="viewController">
+                    <window key="window" identifier="QuickViewWindow" title="Quick View" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" id="2zG-ID-qVh">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" unifiedTitleAndToolbar="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="357" height="264"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <view key="contentView" id="hhw-Qp-uL6">
+                            <rect key="frame" x="0.0" y="0.0" width="357" height="264"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="nNk-OG-YuX" id="yQ1-6M-Dhg"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="pVh-91-pvQ" kind="relationship" relationship="window.shadowedContentViewController" id="wxY-aA-NgQ"/>
+                    </connections>
+                </windowController>
+                <customObject id="bpW-9J-364" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-10"/>
+        </scene>
+        <!--Quick View Controller - QuickView-->
+        <scene sceneID="Uud-Di-Pte">
+            <objects>
+                <viewController nibName="QuickView" storyboardIdentifier="QuickViewController" id="pVh-91-pvQ" customClass="QuickViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" wantsLayer="YES" id="Qqu-ut-A0o">
+                        <rect key="frame" x="0.0" y="0.0" width="387" height="264"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-bB-jHg">
+                                <rect key="frame" x="163" y="149" width="97" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 files selected" id="T4c-8S-LS4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField appearanceType="aqua" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jrn-an-Ac8">
+                                <rect key="frame" x="163" y="124" width="157" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 MB (0 KB)" id="Xpf-MJ-Q62">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator appearanceType="aqua" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="VoD-SB-b4z">
+                                <rect key="frame" x="63" y="124" width="32" height="32"/>
+                            </progressIndicator>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L45-dF-2Tq">
+                                <rect key="frame" x="11" y="73" width="136" height="135"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="dB4-Nh-Je3"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="lbl_items_num" destination="xvT-bB-jHg" id="1dH-6Y-Mrm"/>
+                    </connections>
+                </viewController>
+                <customObject id="0Mx-oz-nqj" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1096.5" y="551"/>
         </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">

@@ -17,6 +17,20 @@
     }
     return self;
 }
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    //Encode properties, other class variables, etc
+    [encoder encodeObject:self.title forKey:@"Title"];
+    [encoder encodeObject:[NSNumber numberWithInt:self.type] forKey:@"Type"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    if((self = [super init])) {
+        //decode properties, other class varsx
+        self.title = [decoder decodeObjectForKey:@"Title"];
+        self.type = [((NSNumber*)[decoder decodeObjectForKey:@"Type"]) intValue];
+    }
+    return self;
+}
 
 @end
 

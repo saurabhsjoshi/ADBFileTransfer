@@ -13,7 +13,7 @@
 
 @property (strong) NSMutableArray *hist;
 @property (strong) NSMutableArray *list_data;
-
+@property (strong) NSWindowController *QuickViewWindow;
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSProgressIndicator *prg_loading;
 @property (weak) IBOutlet NSTextField *lbl_cur;
@@ -23,6 +23,7 @@
 @property (weak) IBOutlet NSButton *btn_back;
 
 - (void)doubleClick:(id)nid;
+- (void) keyDown: (NSEvent *) event;
 - (void) populateAtPath;
 
 @end

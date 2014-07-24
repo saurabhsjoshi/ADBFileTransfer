@@ -23,6 +23,7 @@
 		09E2BA00197D755000432A84 /* adb.pyc in Resources */ = {isa = PBXBuildFile; fileRef = 09E2B9FF197D755000432A84 /* adb.pyc */; };
 		09E2BA04197D789800432A84 /* runner.sh in Resources */ = {isa = PBXBuildFile; fileRef = 09E2BA03197D789800432A84 /* runner.sh */; };
 		09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E2BA05197D7AC400432A84 /* AdbHelper.m */; };
+		09E75414197F0B7C00580FFD /* QuickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E75413197F0B7C00580FFD /* QuickViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		09E2BA03197D789800432A84 /* runner.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = runner.sh; sourceTree = "<group>"; };
 		09E2BA05197D7AC400432A84 /* AdbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdbHelper.m; sourceTree = "<group>"; };
 		09E2BA07197D7ADC00432A84 /* AdbHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdbHelper.h; sourceTree = "<group>"; };
+		09E75412197F0B6100580FFD /* QuickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickViewController.h; sourceTree = "<group>"; };
+		09E75413197F0B7C00580FFD /* QuickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09398C8A197F07780051A597 /* QuickViewFiles */ = {
+			isa = PBXGroup;
+			children = (
+				09E75412197F0B6100580FFD /* QuickViewController.h */,
+				09E75413197F0B7C00580FFD /* QuickViewController.m */,
+			);
+			name = QuickViewFiles;
+			sourceTree = "<group>";
+		};
 		09E2B984197D3A7F00432A84 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		09E2B98F197D3A7F00432A84 /* ADBFileTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				09398C8A197F07780051A597 /* QuickViewFiles */,
 				09E2B9F8197D673900432A84 /* android-tools */,
 				09E2B9C4197D4CA800432A84 /* ListDataDoc.h */,
 				09E2B9C5197D4D3400432A84 /* ListDataDoc.m */,
@@ -278,6 +291,7 @@
 				09E2B9C6197D4D3400432A84 /* ListDataDoc.m in Sources */,
 				09E2B993197D3A7F00432A84 /* main.m in Sources */,
 				09E2BA06197D7AC400432A84 /* AdbHelper.m in Sources */,
+				09E75414197F0B7C00580FFD /* QuickViewController.m in Sources */,
 				09E2B999197D3A7F00432A84 /* AppDelegate.m in Sources */,
 				09E2B9BD197D460100432A84 /* ListData.m in Sources */,
 			);

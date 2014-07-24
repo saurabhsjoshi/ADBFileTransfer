@@ -10,6 +10,7 @@
 #import "ListData.h"
 #import "ListDataDoc.h"
 #import "AdbHelper.h"
+#import "QuickViewController.h"
 
 @implementation ViewController
 
@@ -23,6 +24,7 @@
 @synthesize btn_ref = btn_ref;
 
 NSString* cur_path = @"\'/sdcard/\'";
+NSMutableArray *selected_list;
 int offset = 0;
 
 - (void) populateAtPath {
@@ -100,6 +102,8 @@ int offset = 0;
     //Add home to stack
     [self.hist addObject:cur_path];
     
+    selected_list = [[NSMutableArray alloc]init];
+    
     [self populateAtPath];
 }
 
@@ -129,11 +133,6 @@ int offset = 0;
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
     return [self.list_data count];
-}
-
--(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    
-    return @"hello world";
 }
 
 - (void) changeCurPath:(NSString*)to_add{
@@ -243,8 +242,6 @@ int offset = 0;
 
 - (void) toggleNavigation:(BOOL)enabled{
     [btn_home setEnabled:enabled];
-    [btn_forward setEnabled:enabled];
-    [btn_back setEnabled:enabled];
     [btn_ref setEnabled:enabled];
     [_tableView setEnabled:enabled];
     [progressBar setHidden:enabled];
@@ -272,7 +269,43 @@ int offset = 0;
     [self populateAtPath];
 }
 
-
+-(void) keyDown: (NSEvent *) event
+{
+    //Better tell superman be4 v do anything!
+    [super keyDown:event];
+    
+    NSString *chars = [event characters];
+    unichar character = [chars characterAtIndex: 0];
+    //Check if spacebar was tapped
+    if (character == 0x0020)//UTF-16 in Unicode is space :P
+    {
+        //Get the selected rows
+        NSIndexSet *rowNumbers = [_tableView selectedRowIndexes];
+        
+        [selected_list removeAllObjects];
+        
+        NSUInteger index=[rowNumbers firstIndex];
+        
+        while(index != NSNotFound)
+        {
+            ListDataDoc* dat = (ListDataDoc*)[_list_data objectAtIndex:index];
+            dat.data.title = [NSString stringWithFormat:@"%@%@",cur_path, dat.data.title];
+            NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:dat.data];
+            [selected_list addObject:encodedObject];
+            index=[rowNumbers indexGreaterThanIndex: index];
+        }
+        
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:selected_list forKey:@"SELECTED_ITEMS"];
+        
+        if([defaults synchronize])
+        {
+            self.QuickViewWindow = [self.storyboard instantiateControllerWithIdentifier:@"QuickViewControllerWindow"];
+            [self.QuickViewWindow showWindow:self];
+        }
+    }
+}
 
 - (void)goBack:(NSEvent *)event {
     offset -= 1;
