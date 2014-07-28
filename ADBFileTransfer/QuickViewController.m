@@ -12,6 +12,20 @@
 
 @implementation QuickViewController
 
+/*- (id)init:{
+    self = [self.storyboard instantiateControllerWithIdentifier:@"QuickViewControllerWindow"];
+    return self;
+}*/
+
+- (id) initWithView:(NSString*)stuff{
+    self = [super init];
+    if(self){
+        NSLog(@"%@", stuff);
+    }
+    return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -21,6 +35,7 @@
     for (NSData* d in selected_list){
         NSData *encodedObject = [NSKeyedUnarchiver unarchiveObjectWithData:d];
         ListData *dat = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+        
         //NSLog(((ListData*)[NSKeyedUnarchiver unarchiveObjectWithData:encodedObject]).title);
     }
     
