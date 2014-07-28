@@ -7,10 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "ListDataDoc.h"
-#import "QuickViewController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-@property (nonatomic, strong) QuickViewController *controller1;
 @end
 
